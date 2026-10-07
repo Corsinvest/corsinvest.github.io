@@ -3,45 +3,217 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>cv4pve documentation: tools and API libraries for Proxmox VE</title>
-  <meta name="description" content="Documentation of the cv4pve suite by Corsinvest: the web administration, the command line tools and the API libraries for Proxmox VE.">
+  <title>Corsinvest open source documentation: Proxmox VE and Visual Studio</title>
+  <meta name="description" content="The manuals of the open source software by Corsinvest: the cv4pve suite for Proxmox VE, with web administration, tools and API libraries, and cv4vs Agents for Visual Studio.">
   <link rel="canonical" href="https://corsinvest.github.io/">
-  <style>
-    :root { color-scheme: light dark; --text: #1c2b3a; --muted: #5a6b7c; --line: #dfe5eb; --link: #1a4269; --back: #fff; }
-    @media (prefers-color-scheme: dark) { :root { --text: #e6edf4; --muted: #9fb2c5; --line: #26415b; --link: #a9cbef; --back: #0d1f31; } }
-    body { margin: 0; background: var(--back); color: var(--text); font: 16px/1.55 system-ui, 'Segoe UI', Arial, sans-serif; }
-    main { max-width: 46rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
-    h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .6rem; }
-    p { color: var(--muted); margin: 0 0 2rem; }
-    ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-    li { padding: .85rem 0; border-bottom: 1px solid var(--line); }
-    a { color: var(--link); font-weight: 600; }
-    li a { display: block; text-decoration: none; }
-    li a:hover { text-decoration: underline; }
-    span { color: var(--muted); font-size: .95rem; }
-  </style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Corsinvest open source documentation">
+  <meta property="og:title" content="Corsinvest open source documentation: Proxmox VE and Visual Studio">
+  <meta property="og:description" content="The manuals of the open source software by Corsinvest: the cv4pve suite for Proxmox VE, with web administration, tools and API libraries, and cv4vs Agents for Visual Studio.">
+  <meta property="og:url" content="https://corsinvest.github.io/">
+  <meta property="og:image" content="https://corsinvest.github.io/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Corsinvest open source documentation: the manuals of the cv4pve suite for Proxmox VE and of cv4vs Agents for Visual Studio.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://corsinvest.github.io/og.png">
+  <link rel="preload" href="/fonts/barlow-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="https://corsinvest.it/en/" aria-label="Corsinvest">
+        <img src="/wordmark-white.svg" alt="Corsinvest" width="116" height="24">
+      </a>
+      <nav class="nav" aria-label="Corsinvest">
+        <a href="https://corsinvest.it/en/open-source/">Open source</a>
+        <a href="https://github.com/Corsinvest">GitHub</a>
+        <a href="https://corsinvest.it/en/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>cv4pve documentation</h1>
-    <p>Tools and API libraries for Proxmox VE, by <a href="https://www.corsinvest.it/en/cv4pve/">Corsinvest</a>. Each one has its own documentation site.</p>
-    <ul>
-      <li><a href="/cv4pve-admin/">cv4pve-admin</a><span>Professional administration interface for Proxmox VE with advanced features and support.</span></li>
-      <li><a href="/cv4pve-report/">cv4pve-report</a><span>Inventory of a whole Proxmox VE cluster in Excel, HTML or JSON: the RVTools for Proxmox VE.</span></li>
-      <li><a href="/cv4pve-diag/">cv4pve-diag</a><span>Health checks and diagnostics for Proxmox VE.</span></li>
-      <li><a href="/cv4pve-autosnap/">cv4pve-autosnap</a><span>Automatic snapshots of Proxmox VE virtual machines and containers, with retention.</span></li>
-      <li><a href="/cv4pve-node-protect/">cv4pve-node-protect</a><span>Configuration backup for Proxmox VE nodes over SSH: network, storage, cluster and certificates in one archive per node.</span></li>
-      <li><a href="/cv4pve-metrics-exporter/">cv4pve-metrics-exporter</a><span>Prometheus exporter for Proxmox VE: nodes, VMs, containers, storage, HA, replication, backup coverage, subscription and SMART, from outside the cluster.</span></li>
-      <li><a href="/cv4pve-botgram/">cv4pve-botgram</a><span>Telegram bot to manage and monitor a Proxmox VE cluster from a phone.</span></li>
-      <li><a href="/cv4pve-cli/">cv4pve-cli</a><span>The whole Proxmox VE API from the command line, like kubectl for Kubernetes: saved contexts for several clusters, 327 built-in aliases and tab completion that reads the live cluster.</span></li>
-      <li><a href="/cv4pve-pepper/">cv4pve-pepper</a><span>Open the SPICE or VNC console of a Proxmox VE VM or container with one command, from your desktop, a script or a shortcut.</span></li>
-      <li><a href="/cv4pve-vdi/">cv4pve-vdi</a><span>Desktop VDI client for Proxmox VE: SPICE, VNC, RDP and SSH to your VMs and containers, without the web UI.</span></li>
-      <li><a href="/cv4pve-api-dotnet/">cv4pve-api-dotnet</a><span>Proxmox VE API client for .NET: the whole API as typed C# calls, with helpers for VMs, containers, tasks and command line tools.</span></li>
-      <li><a href="/cv4pve-api-java/">cv4pve-api-java</a><span>Proxmox VE API client for Java: the whole API as Java calls that follow the tree of the API, with results as JSON, tasks and API token or password login.</span></li>
-      <li><a href="/cv4pve-api-javascript/">cv4pve-api-javascript</a><span>Proxmox VE API client for JavaScript and Node.js: the whole API as calls that follow the tree of the API, with results as JSON, tasks and API token or password login.</span></li>
-      <li><a href="/cv4pve-api-php/">cv4pve-api-php</a><span>Proxmox VE API client for PHP: the whole API as PHP calls that follow the tree of the API, with results as objects or arrays, tasks and API token or password login.</span></li>
-      <li><a href="/cv4pve-api-powershell/">cv4pve-api-powershell</a><span>PowerShell module for the Proxmox VE API: automate clusters, nodes, VMs and containers from PowerShell, the PowerCLI for Proxmox VE.</span></li>
-    </ul>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Corsinvest</p>
+        <h1>Open source <span class="accent">documentation</span></h1>
+        <p class="lead">Each project has its own manual: pick the one you use.</p>
+        <nav class="jump" aria-label="Sections">
+          <a href="#proxmox-ve">For Proxmox VE</a>
+          <a href="#visual-studio">For Visual Studio</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="platform" id="proxmox-ve">
+      <div class="container">
+        <p class="eyebrow">cv4pve suite</p>
+        <h2>For Proxmox VE</h2>
+        <p class="platform__note">Web administration, tools and API libraries. They run outside the nodes, with nothing to install on them.</p>
+
+        <h3>Web interface</h3>
+        <ul class="cards cards--single">
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-admin/">
+              <img src="https://corsinvest.github.io/cv4pve-admin/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-admin</span>
+              <span class="card__text">Professional administration interface for Proxmox VE with advanced features and support.</span>
+            </a>
+          </li>
+        </ul>
+
+        <h3>Tools</h3>
+        <ul class="cards">
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-report/">
+              <img src="https://corsinvest.github.io/cv4pve-report/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-report</span>
+              <span class="card__text">Inventory of a whole Proxmox VE cluster in Excel, HTML or JSON: the RVTools for Proxmox VE.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-diag/">
+              <img src="https://corsinvest.github.io/cv4pve-diag/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-diag</span>
+              <span class="card__text">Health checks and diagnostics for Proxmox VE.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-autosnap/">
+              <img src="https://corsinvest.github.io/cv4pve-autosnap/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-autosnap</span>
+              <span class="card__text">Automatic snapshots of Proxmox VE virtual machines and containers, with retention.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-node-protect/">
+              <img src="https://corsinvest.github.io/cv4pve-node-protect/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-node-protect</span>
+              <span class="card__text">Configuration backup for Proxmox VE nodes over SSH: network, storage, cluster and certificates in one archive per node.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-metrics-exporter/">
+              <img src="https://corsinvest.github.io/cv4pve-metrics-exporter/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-metrics-exporter</span>
+              <span class="card__text">Prometheus exporter for Proxmox VE: nodes, VMs, containers, storage, HA, replication, backup coverage, subscription and SMART, from outside the cluster.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-cli/">
+              <img src="https://corsinvest.github.io/cv4pve-cli/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-cli</span>
+              <span class="card__text">The whole Proxmox VE API from the command line, like kubectl for Kubernetes: saved contexts for several clusters, 327 built-in aliases and tab completion that reads the live cluster.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-pepper/">
+              <img src="https://corsinvest.github.io/cv4pve-pepper/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-pepper</span>
+              <span class="card__text">Open the SPICE or VNC console of a Proxmox VE VM or container with one command, from your desktop, a script or a shortcut.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-vdi/">
+              <img src="https://corsinvest.github.io/cv4pve-vdi/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-vdi</span>
+              <span class="card__text">Desktop VDI client for Proxmox VE: SPICE, VNC, RDP and SSH to your VMs and containers, without the web UI.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-botgram/">
+              <img src="https://corsinvest.github.io/cv4pve-botgram/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-botgram</span>
+              <span class="card__text">Telegram bot to manage and monitor a Proxmox VE cluster from a phone.</span>
+            </a>
+          </li>
+        </ul>
+
+        <h3>API libraries</h3>
+        <ul class="cards">
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-api-dotnet/">
+              <img src="https://corsinvest.github.io/cv4pve-api-dotnet/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-api-dotnet</span>
+              <span class="card__text">Proxmox VE API client for .NET: the whole API as typed C# calls, with helpers for VMs, containers, tasks and command line tools.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-api-java/">
+              <img src="https://corsinvest.github.io/cv4pve-api-java/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-api-java</span>
+              <span class="card__text">Proxmox VE API client for Java: the whole API as Java calls that follow the tree of the API, with results as JSON, tasks and API token or password login.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-api-javascript/">
+              <img src="https://corsinvest.github.io/cv4pve-api-javascript/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-api-javascript</span>
+              <span class="card__text">Proxmox VE API client for JavaScript and Node.js: the whole API as calls that follow the tree of the API, with results as JSON, tasks and API token or password login.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-api-php/">
+              <img src="https://corsinvest.github.io/cv4pve-api-php/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-api-php</span>
+              <span class="card__text">Proxmox VE API client for PHP: the whole API as PHP calls that follow the tree of the API, with results as objects or arrays, tasks and API token or password login.</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4pve-api-powershell/">
+              <img src="https://corsinvest.github.io/cv4pve-api-powershell/icon-dark.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4pve-api-powershell</span>
+              <span class="card__text">PowerShell module for the Proxmox VE API: automate clusters, nodes, VMs and containers from PowerShell, the PowerCLI for Proxmox VE.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="platform" id="visual-studio">
+      <div class="container">
+        <p class="eyebrow">cv4vs</p>
+        <h2>For Visual Studio</h2>
+        <ul class="cards cards--single">
+          <li>
+            <a class="card" href="https://corsinvest.github.io/cv4vs-agents/">
+              <img src="https://corsinvest.github.io/cv4vs-agents/icon.svg" alt="" width="44" height="44" loading="lazy">
+              <span class="card__name">cv4vs Agents</span>
+              <span class="card__text">Claude Code inside Visual Studio 2022 and 2026: a rich chat, a real terminal and the IDE handed to the agent as tools.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container support__inner">
+        <div>
+          <h2>Open source at Corsinvest</h2>
+          <p>Why we publish this software, and the professional support for it, are on the Corsinvest site.</p>
+        </div>
+        <a class="button" href="https://corsinvest.it/en/open-source/">Open source on corsinvest.it</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="https://corsinvest.it/en/" aria-label="Corsinvest">
+          <img src="/wordmark-white.svg" alt="Corsinvest" width="116" height="24">
+        </a>
+        <p class="footer__motto">By sysadmins, for sysadmins.</p>
+      </div>
+      <div class="footer__legal">
+        <p>Made with ❤️ in Italy · Copyright © Corsinvest Srl · <a href="https://corsinvest.it/en/privacy/">Privacy policy</a></p>
+        <p>Proxmox® is a registered trademark of Proxmox Server Solutions GmbH. cv4pve is developed by Corsinvest and is not a Proxmox product.</p>
+        <p>Claude and Claude Code are trademarks of Anthropic, PBC. Visual Studio is a trademark of Microsoft Corporation. cv4vs Agents is not affiliated with or endorsed by either company; the names are used only to describe what it works with.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

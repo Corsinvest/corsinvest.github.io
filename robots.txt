@@ -7,12 +7,13 @@ Sitemap: https://corsinvest.github.io/cv4pve-diag/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-autosnap/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-node-protect/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-metrics-exporter/sitemap-index.xml
-Sitemap: https://corsinvest.github.io/cv4pve-botgram/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-cli/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-pepper/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-vdi/sitemap-index.xml
+Sitemap: https://corsinvest.github.io/cv4pve-botgram/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-api-dotnet/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-api-java/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-api-javascript/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-api-php/sitemap-index.xml
 Sitemap: https://corsinvest.github.io/cv4pve-api-powershell/sitemap-index.xml
+Sitemap: https://corsinvest.github.io/cv4vs-agents/sitemap-index.xml

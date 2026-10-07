@@ -1,0 +1,422 @@
+/* Root page of corsinvest.github.io: the index of the cv4pve documentation sites.
+   Colours, type and spacing are those of corsinvest.it (its dark ground, used there for the
+   product pages) and of the documentation sites, which share them through cv4pve-docs-theme.
+   One page, no build: plain CSS. */
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('fonts/barlow-400-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('fonts/barlow-600-latin.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('fonts/barlow-condensed-600-latin.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('fonts/barlow-condensed-700-latin.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --brand-blue: #1a4269;
+  --brand-blue-bright: #2a6fae;
+  --surface-dark: #14304b;
+  --ink-deep: #0a1826;
+  --ink-raised: #10263b;
+  --on-ink: #e7eef6;
+  --on-ink-muted: #9db1c6;
+  --card-on-ink: rgb(20 48 75 / 0.35);
+  --card-border-on-ink: rgb(125 178 232 / 0.16);
+  --accent-on-ink: #a9cbef;
+  --glow-on-ink: rgb(42 111 174 / 0.35);
+  --grid-line-on-ink: rgb(125 178 232 / 0.06);
+  --white: #ffffff;
+
+  --font-display: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --font-body: Barlow, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --width-max: 72rem;
+  --radius-md: 8px;
+  --transition: 160ms ease;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--on-ink);
+  background: var(--ink-deep);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent-on-ink);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--width-max);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* Header: the mark and three links, as on the product pages of corsinvest.it. */
+.header {
+  border-bottom: 1px solid var(--card-border-on-ink);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 4.5rem;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav a {
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--on-ink-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+.nav a:hover {
+  color: var(--accent-on-ink);
+}
+
+/* Hero: the grid and the glow of the product pages. */
+.hero {
+  padding-block: clamp(3rem, 7vw, 5.5rem) clamp(2rem, 4vw, 3rem);
+  background:
+    radial-gradient(ellipse 70% 60% at 70% 0%, var(--glow-on-ink), transparent 65%),
+    linear-gradient(to right, var(--grid-line-on-ink) 1px, transparent 1px) 0 0 / 3rem 3rem,
+    linear-gradient(to bottom, var(--grid-line-on-ink) 1px, transparent 1px) 0 0 / 3rem 3rem;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-on-ink);
+}
+
+h1 {
+  font-size: clamp(2.75rem, 4.6vw + 1.5rem, 5.125rem);
+}
+
+h1 .accent {
+  color: var(--accent-on-ink);
+}
+
+.lead {
+  max-width: 40rem;
+  margin-top: 1.5rem;
+  font-size: clamp(1.1875rem, 0.6vw + 1.05rem, 1.375rem);
+  line-height: 1.4;
+  color: var(--on-ink-muted);
+}
+
+/* Links from the hero to the sections of the page. */
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.jump a {
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--card-border-on-ink);
+  border-radius: var(--radius-md);
+  background: var(--card-on-ink);
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--on-ink);
+  text-decoration: none;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.jump a:hover {
+  border-color: var(--accent-on-ink);
+  color: var(--accent-on-ink);
+}
+
+/* One section for each platform the software is for, with its groups of documentation sites. */
+main {
+  flex: 1;
+}
+
+.platform {
+  padding-block: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 2vw, 1.5rem);
+  scroll-margin-top: 1rem;
+}
+
+.platform + .platform {
+  border-top: 1px solid var(--card-border-on-ink);
+}
+
+.platform h2 {
+  font-size: clamp(2rem, 2.8vw + 1.35rem, 3.125rem);
+}
+
+.platform .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.platform__note {
+  max-width: 40rem;
+  margin-top: 0.75rem;
+  color: var(--on-ink-muted);
+}
+
+.platform h3 {
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  color: var(--accent-on-ink);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A group with one site: a card as wide as two, not a grid left half empty. */
+.cards--single {
+  grid-template-columns: minmax(0, 39rem);
+}
+
+.platform > .container > h2 + .cards {
+  margin-top: 1.5rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  gap: 0.25rem 1rem;
+  align-content: start;
+  height: 100%;
+  padding: 1.25rem;
+  background: var(--card-on-ink);
+  border: 1px solid var(--card-border-on-ink);
+  border-radius: var(--radius-md);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: var(--accent-on-ink);
+  background: rgb(20 48 75 / 0.6);
+  transform: translateY(-2px);
+}
+
+.card img {
+  grid-row: span 2;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.card__name {
+  align-self: center;
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--white);
+}
+
+.card__text {
+  grid-column: 2;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--on-ink-muted);
+}
+
+/* Support band: the product story and the paid support are on corsinvest.it. */
+.support {
+  margin-top: clamp(1rem, 3vw, 2rem);
+  padding-block: clamp(2rem, 4vw, 3rem);
+  background: var(--ink-raised);
+  border-top: 1px solid var(--card-border-on-ink);
+}
+
+.support__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.support h2 {
+  font-size: clamp(1.5rem, 1.5vw + 1.2rem, 1.9rem);
+}
+
+.support p {
+  max-width: 40rem;
+  margin-top: 0.5rem;
+  color: var(--on-ink-muted);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: var(--white);
+  color: var(--brand-blue);
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--transition);
+}
+
+.button:hover {
+  background: color-mix(in srgb, var(--white) 88%, var(--brand-blue));
+}
+
+/* Footer: the brand blue ground of corsinvest.it. */
+.footer {
+  padding-block: 2rem;
+  background: var(--surface-dark);
+  border-top: 1px solid color-mix(in srgb, var(--white) 15%, transparent);
+  font-size: 0.8125rem;
+  color: color-mix(in srgb, var(--white) 64%, transparent);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.footer__motto {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--white) 88%, transparent);
+}
+
+.footer__legal {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--white) 14%, transparent);
+}
+
+.footer__legal p + p {
+  margin-top: 0.35rem;
+}
+
+.footer a {
+  color: color-mix(in srgb, var(--white) 88%, transparent);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+@media (max-width: 30rem) {
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .nav a {
+    padding-inline: 0.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
